@@ -31,6 +31,7 @@
 
     --transition:
         all 0.4s ease;
+
 }
 
 
@@ -96,6 +97,7 @@ button {
 
 /* =========================================
    HEADER
+   SEM LOGO
 ========================================= */
 
 .header {
@@ -114,7 +116,7 @@ button {
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: center;
 
     padding: 0 6%;
 
@@ -131,31 +133,13 @@ button {
 }
 
 
-.logo-menu {
-
-    width: 75px;
-
-}
-
-
-.logo-menu img {
-
-    width: 100%;
-
-    height: 60px;
-
-    object-fit: contain;
-
-    mix-blend-mode: multiply;
-
-}
-
-
 .navbar {
 
     display: flex;
 
     align-items: center;
+
+    justify-content: center;
 
     gap: 35px;
 
@@ -219,6 +203,10 @@ button {
 .menu-btn {
 
     display: none;
+
+    position: absolute;
+
+    right: 6%;
 
     border: none;
 
@@ -445,7 +433,8 @@ button {
 
 
 /* =========================================
-   LOGO HERO
+   LOGO REDONDA DA CAPA
+   ÚNICA LOGO VISUAL
 ========================================= */
 
 .hero-logo {
@@ -604,7 +593,7 @@ button {
 
 
 /* =========================================
-   DECORAÇÕES
+   DECORAÇÕES HERO
 ========================================= */
 
 .hero-decoration {
@@ -753,6 +742,7 @@ button {
 
 /* =========================================
    HISTÓRIA
+   SEM IMAGEM / SEM LOGO
 ========================================= */
 
 .history {
@@ -762,127 +752,13 @@ button {
 }
 
 
-.history-container {
+.history-content {
 
-    max-width: 1100px;
+    max-width: 800px;
 
-    margin: auto;
+    margin: 0 auto;
 
-    display: grid;
-
-    grid-template-columns: 0.9fr 1.1fr;
-
-    gap: 90px;
-
-    align-items: center;
-
-}
-
-
-.history-image {
-
-    position: relative;
-
-}
-
-
-.image-frame {
-
-    position: relative;
-
-    padding: 15px;
-
-    background: var(--beige);
-
-    box-shadow: var(--shadow);
-
-}
-
-
-.image-frame::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 15px;
-
-    border:
-        1px solid rgba(75, 40, 24, 0.2);
-
-    pointer-events: none;
-
-}
-
-
-.image-frame img {
-
-    width: 100%;
-
-    aspect-ratio: 1 / 1;
-
-    object-fit: cover;
-
-    mix-blend-mode: multiply;
-
-}
-
-
-.year-badge {
-
-    position: absolute;
-
-    right: -30px;
-
-    bottom: 30px;
-
-    width: 125px;
-
-    height: 125px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: var(--brown-dark);
-
-    color: var(--cream);
-
-    box-shadow: var(--shadow);
-
-}
-
-
-.year-badge strong {
-
-    font-family:
-        "Cormorant Garamond", serif;
-
-    font-size: 2.3rem;
-
-}
-
-
-.year-badge span {
-
-    font-size: 0.5rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-}
-
-
-.history-text {
-
-    position: relative;
+    text-align: center;
 
 }
 
@@ -891,7 +767,7 @@ button {
 
     display: block;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     font-size: 0.7rem;
 
@@ -904,13 +780,13 @@ button {
 }
 
 
-.history-text h3 {
+.history-content h3 {
 
     font-family:
         "Cormorant Garamond", serif;
 
     font-size:
-        clamp(2.5rem, 4vw, 4rem);
+        clamp(2.8rem, 5vw, 4.5rem);
 
     line-height: 0.95;
 
@@ -923,7 +799,7 @@ button {
 }
 
 
-.history-text h3 span {
+.history-content h3 span {
 
     color: var(--caramel);
 
@@ -932,9 +808,11 @@ button {
 }
 
 
-.history-text p {
+.history-content p {
 
-    margin-bottom: 20px;
+    max-width: 720px;
+
+    margin: 0 auto 20px;
 
     font-size: 0.95rem;
 
@@ -945,7 +823,7 @@ button {
 }
 
 
-.history-text strong {
+.history-content strong {
 
     color: var(--brown);
 
@@ -954,17 +832,24 @@ button {
 
 .quote {
 
+    max-width: 650px;
+
+    margin: 40px auto 0;
+
+    padding: 25px;
+
     display: flex;
 
-    align-items: flex-start;
+    align-items: center;
+
+    justify-content: center;
 
     gap: 15px;
 
-    margin-top: 35px;
-
-    padding: 20px;
-
     border-left:
+        2px solid var(--caramel);
+
+    border-right:
         2px solid var(--caramel);
 
     background:
@@ -973,7 +858,7 @@ button {
     font-family:
         "Cormorant Garamond", serif;
 
-    font-size: 1.25rem;
+    font-size: 1.35rem;
 
     font-style: italic;
 
@@ -1176,18 +1061,6 @@ button {
 }
 
 
-/*
-    GALERIA:
-
-    3 imagens por linha.
-
-    O tamanho de todas as caixas é igual,
-    mas a imagem NÃO é cortada.
-
-    object-fit: contain mantém a foto
-    inteira e evita deformação.
-*/
-
 .gallery {
 
     width: 100%;
@@ -1241,11 +1114,6 @@ button {
 
 }
 
-
-/*
-    Pequeno detalhe decorativo
-    atrás da fotografia.
-*/
 
 .gallery-item::before {
 
@@ -1303,10 +1171,6 @@ button {
 
 }
 
-
-/*
-    NÚMERO DA FOTO
-*/
 
 .gallery-item > span {
 
@@ -1668,6 +1532,7 @@ button {
 
 /* =========================================
    FOOTER
+   SEM LOGO
 ========================================= */
 
 footer {
@@ -1683,34 +1548,30 @@ footer {
 }
 
 
-.footer-logo {
-
-    width: 120px;
-
-    margin: 0 auto 10px;
-
-}
-
-
-.footer-logo img {
-
-    width: 100%;
-
-    mix-blend-mode: screen;
-
-    opacity: 0.9;
-
-}
-
-
 footer p {
 
     font-family:
         "Cormorant Garamond", serif;
 
-    font-size: 1.4rem;
+    font-size: 2rem;
 
     color: var(--gold);
+
+}
+
+
+footer > span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(248, 238, 225, 0.6);
 
 }
 
@@ -1725,18 +1586,6 @@ footer p {
 
     background:
         rgba(198, 154, 104, 0.5);
-
-}
-
-
-footer > span {
-
-    font-size: 0.55rem;
-
-    letter-spacing: 2px;
-
-    color:
-        rgba(248, 238, 225, 0.5);
 
 }
 
@@ -1925,13 +1774,6 @@ footer > span {
     }
 
 
-    .history-container {
-
-        gap: 50px;
-
-    }
-
-
     .gallery {
 
         grid-template-columns:
@@ -2062,28 +1904,9 @@ footer > span {
     }
 
 
-    .history-container,
-    .contact-container {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .history-image {
-
-        max-width: 550px;
-
-        margin: auto;
-
-    }
-
-
-    .history-text {
+    .history-content {
 
         max-width: 650px;
-
-        margin: auto;
 
     }
 
@@ -2097,6 +1920,8 @@ footer > span {
 
 
     .contact-container {
+
+        grid-template-columns: 1fr;
 
         gap: 50px;
 
@@ -2142,9 +1967,9 @@ footer > span {
     }
 
 
-    .logo-menu {
+    .menu-btn {
 
-        width: 65px;
+        right: 5%;
 
     }
 
@@ -2237,27 +2062,23 @@ footer > span {
     }
 
 
-    .history-text h3 {
+    .history-content h3 {
 
         font-size: 3rem;
 
     }
 
 
-    .year-badge {
+    .history-content p {
 
-        width: 100px;
-
-        height: 100px;
-
-        right: -10px;
+        font-size: 0.85rem;
 
     }
 
 
-    .year-badge strong {
+    .quote {
 
-        font-size: 1.8rem;
+        font-size: 1.15rem;
 
     }
 
@@ -2275,17 +2096,6 @@ footer > span {
 
     }
 
-
-    /*
-        CELULAR:
-
-        Continuamos com 2 colunas
-        para não deixar as fotos
-        pequenas demais.
-
-        No celular, as imagens ficam
-        grandes e continuam inteiras.
-    */
 
     .gallery {
 

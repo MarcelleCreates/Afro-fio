@@ -8,18 +8,25 @@
 // MENU MOBILE
 // =========================================
 
-const menuBtn = document.getElementById("menu-btn");
-const navbar = document.getElementById("navbar");
+const menuBtn =
+    document.getElementById("menu-btn");
+
+const navbar =
+    document.getElementById("navbar");
 
 
 menuBtn.addEventListener("click", () => {
 
     navbar.classList.toggle("active");
 
-    const icon = menuBtn.querySelector("i");
+
+    const icon =
+        menuBtn.querySelector("i");
 
 
-    if (navbar.classList.contains("active")) {
+    if (
+        navbar.classList.contains("active")
+    ) {
 
         icon.classList.remove("fa-bars");
 
@@ -38,7 +45,7 @@ menuBtn.addEventListener("click", () => {
 
 
 // =========================================
-// FECHAR MENU AO CLICAR
+// FECHAR MENU
 // =========================================
 
 const navLinks =
@@ -67,7 +74,7 @@ navLinks.forEach(link => {
 
 
 // =========================================
-// ANIMAÇÃO AO ROLAR A PÁGINA
+// ANIMAÇÃO AO ROLAR
 // =========================================
 
 const revealElements =
@@ -86,7 +93,10 @@ const revealOnScroll = () => {
             element.getBoundingClientRect().top;
 
 
-        if (elementTop < windowHeight - 100) {
+        if (
+            elementTop <
+            windowHeight - 100
+        ) {
 
             element.classList.add("active");
 
@@ -108,7 +118,7 @@ revealOnScroll();
 
 
 // =========================================
-// ANO AUTOMÁTICO DO FOOTER
+// ANO AUTOMÁTICO
 // =========================================
 
 const year =
@@ -125,7 +135,7 @@ if (year) {
 
 
 // =========================================
-// EFEITO NO HEADER AO ROLAR
+// EFEITO DO HEADER
 // =========================================
 
 const header =
